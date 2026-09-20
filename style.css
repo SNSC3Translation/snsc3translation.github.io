@@ -19,7 +19,7 @@ body {
     background-image: linear-gradient(180deg, rgba(15, 26, 70, 1) 0%, rgba(51, 79, 170, 1) 15%, rgba(197, 217, 254, 1) 100%);
     background-size: cover;
     font-family: swordcraftFont;
-    font-size: large;
+    font-size: 1.5em;
     word-spacing: 3px;
     min-height: 100vh;
     min-height: 100dvh;
@@ -38,12 +38,40 @@ aside {
 }
 
 main {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
     padding: min(30px, 7%);
+    align-items: center;
+    justify-content: center;
 }
 
 main p {
     margin-top: 5px;
     margin-bottom: 15px;
+}
+
+img.ref {
+    border: 3px solid black;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+div.scroll-container {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+div.scroll-container img {
+    border: 3px solid black;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 #logo {
@@ -145,6 +173,8 @@ UL COLUMNS
 
     main {
         padding: 2em 1em 60px 1em;
+        width: 90%;
+        font-size: 0.65em;
     }
 
     .container {
