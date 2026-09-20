@@ -1,13 +1,252 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: swordcraftFont;
+    src: url(font/Swordcraft.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html {
-    height: auto;
+    line-height: 1.5rem;
 }
 
 body {
-    background: #0F1A46;
-    background-image: linear-gradient(180deg, rgba(15, 26, 70, 1) 0%, rgba(51, 79, 170, 1) 75%, rgba(197, 217, 254, 1) 100%);
-    height: auto;
     background-attachment: fixed;
+    background-image: linear-gradient(180deg, rgba(15, 26, 70, 1) 0%, rgba(51, 79, 170, 1) 15%, rgba(197, 217, 254, 1) 100%);
     background-size: cover;
+    font-family: swordcraftFont;
+    font-size: 1.5em;
+    word-spacing: 3px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+aside {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 250px;
+    border-right: 1px solid black;
+    position: sticky;
+    top: 0;
+    align-self: self-start;
+}
+
+main {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: min(30px, 7%);
+    align-items: center;
+    justify-content: center;
+}
+
+main p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+img.ref {
+    border: 3px solid black;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+div.scroll-container {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+div.scroll-container img {
+    border: 3px solid black;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#logo {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+#sidebar {
+    padding: 5px 1em;
+}
+
+#sidebar ul {
+    list-style: none;
+}
+
+#sidebar ul li.active a {
+    color: yellow !important;
+
+    svg {
+        fill: yellow;
+    }
+}
+
+#sidebar a, #sidebar .dropdown-btn {
+    border-radius: 0.5em;
+    padding: 0.85em;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+#sidebar a span, #sidebar .dropdown-btn span {
+    flex-grow: 1;
+}
+
+#sidebar a:hover, #sidebar .dropdown-btn:hover {
+    background-color: aqua;
+}
+
+#sidebar .sub-menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 200ms ease-in-out;
+
+    > div {
+        overflow: hidden;
+    }
+}
+
+#sidebar .sub-menu li {
+    padding-left: 2.5em;
+}
+
+#sidebar .sub-menu.show {
+    grid-template-rows: 1fr;
+}
+
+#sidebar svg {
+    flex-shrink: 0;
+    fill: black;
+}
+
+.dropdown-btn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+.dropdown-btn svg {
+    transition: 200ms ease;
+}
+
+/*
+UL COLUMNS
+.container ul {
+    columns: 3;
+}
+    */
+
+.rotate svg:last-child {
+    rotate: -180deg;
+}
+
+@media(max-width: 800px) {
+    aside {
+        border-right: none;
+        height: auto;
+    }
+
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 2em 1em 60px 1em;
+        width: 90%;
+        font-size: 0.65em;
+    }
+
+    .container {
+        border: none;
+        padding: 0;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #sidebar {
+        height: 60px;
+        width: 100%;
+        background-color: rgb(98, 98, 98);
+        border-top: 1px solid black;
+        padding: 0;
+        position: fixed;
+        top: unset;
+        bottom: 0;
+
+        > ul {
+            padding: 0;
+            display: grid;
+            grid-auto-columns: 60px;
+            grid-auto-flow: column;
+            align-items: center;
+            overflow-x: auto;
+        }
+
+        ul li {
+            height: 100%;
+        }
+
+        ul a, ul .dropdown-btn {
+            width: 60px;
+            height: 60px;
+            padding: 0;
+            border-radius: 0;
+            justify-content: center;
+        }
+
+        ul li span, .dropdown-btn svg:last-child {
+            display: none;
+        }
+
+        ul li .sub-menu.show {
+            position: fixed;
+            bottom: 60px;
+            left: 0;
+            box-sizing: border-box;
+            height: 60px;
+            width: 100%;
+            background-color: gray;
+            border-top:  1px solid black;
+            display: flex;
+            justify-content: center;
+
+            > div {
+                overflow-x: auto !important;
+            }
+
+            li {
+                display: inline-flex;
+            }
+
+            a {
+                box-sizing: border-box;
+                padding: 1em;
+                width: auto;
+                justify-content: center;
+            }
+        }
+    }
 }
