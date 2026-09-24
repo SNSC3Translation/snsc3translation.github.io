@@ -51,6 +51,10 @@ main p {
     margin-bottom: 15px;
 }
 
+h1 {
+    line-height: 2.5rem;
+}
+
 img.ref {
     border: 3px solid black;
     margin-bottom: 20px;
@@ -68,7 +72,7 @@ div.scroll-container {
 
 div.scroll-container img {
     border: 3px solid black;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
@@ -159,6 +163,25 @@ UL COLUMNS
 
 .rotate svg:last-child {
     rotate: -180deg;
+}
+
+#dl-btn {
+    background-color: #0096FF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#dl-btn:hover {
+    background-color: #1F51FF;
+}
+
+#download {
+    display: flex;
+    justify-content: center;
 }
 
 @media(max-width: 800px) {
