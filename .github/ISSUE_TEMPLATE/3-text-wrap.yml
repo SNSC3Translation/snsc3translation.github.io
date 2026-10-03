@@ -98,4 +98,4 @@ body:
       label: Optional Savefile
       description: If you think it would be helpful please provide a .zip of your save file [.sav] so we can test the bug, problem, or mistake you encountered. 
     validations:
-      required: true
+      required: false
