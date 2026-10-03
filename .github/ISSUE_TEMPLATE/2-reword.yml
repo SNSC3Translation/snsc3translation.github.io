@@ -64,27 +64,6 @@ body:
         - Rufeel
     validations:
       required: true
-  - type: input
-    id: playername
-    attributes:
-      label: Player Character Name
-      description: Type = if it's the default name. Please use these for special characters (Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|♥|♪|★).
-    validations:
-      required: true
-  - type: input
-    id: playernick
-    attributes:
-      label: Player Character Nickname
-      description: Leave blank if it's the same as your player character name. Type = if it's the default nickname. Please use these for special characters (Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|♥|♪|★).
-    validations:
-      required: false
-  - type: input
-    id: beastname
-    attributes:
-      label: Partner Name
-      description: Type = if it's the default partner name. Please use these for special characters (Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|♥|♪|★).
-    validations:
-      required: true
   - type: textarea
     id: repro
     attributes:
@@ -92,3 +71,10 @@ body:
       description: Please provide instructions for how to replicate this issue. Leave blank if it's just "talk to this NPC".
     validations:
       required: false
+  - type: upload
+    id: savefile
+    attributes:
+      label: Optional Savefile
+      description: If you deem it necessary please provide a .zip of your save file [.sav] so we can test the bug, problem, or mistake you encountered. (you can drop, or click to add files).
+    validations:
+      required: true
