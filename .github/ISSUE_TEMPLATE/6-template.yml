@@ -1,7 +1,6 @@
-name: Text Wrapping
-description: Text overflows from it's textbox
-title: "Default"
-labels: ["Text Wrapping"]
+name: Bug Report
+description: Click this unless you have a really good reason not to use the template :)
+title: "Put some kind of title here (Github won't let it default to blank :/)"
 body:
   - type: textarea
     id: screenshot

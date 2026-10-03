@@ -1,38 +1,20 @@
-name: Graphical Error
+name: Graphical Bug
 description: You found an error with a graphic
-title: "[Error]:"
-labels: ["Graphical"]
+title: "Default"
+labels: ["Graphical Error"]
 body:
-  - type: upload
+  - type: textarea
     id: screenshot
     attributes:
-      label: Image
-      description: Please provide an image of the of the bug, problem, or mistake you encountered. (you can drop, or click to add files).
-    validations:
-      required: true
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-      description: Please provide us with a description of the bug, problem, or mistake you encountered.
-    validations:
-      required: true
-  - type: dropdown
-    id: device
-    attributes:
-      label: Emulator or Flashcart
-      description: Are you playing this on a flashcart or an emulator? When in doubt, it's an emulator.
-      multiple: false
-      options:
-        - Emulator
-        - Flashcart
+      label: Screenshot
+      description: Please embed the screenshot (you can click "Paste, drop, or click to add files").
     validations:
       required: true
   - type: input
-    id: deviceinfo
+    id: emulator
     attributes:
-      label: Emulator or Flashcart Info
-      description: Flashcart| flashcart name, firmware, and device (GBA, DS lite, Game Cube). Emulator| Include name, version number, and device (Pc, 3ds, Android Phone). Also, if emulating use mGBA; VBA-M and Virtual Console are generally less accurate.
+      label: Emulator
+      description: Include name and version number. Also, use mGBA if you're not on a phone; VBA-M is generally less accurate.
     validations:
       required: true
   - type: input
@@ -43,16 +25,9 @@ body:
     validations:
       required: true
   - type: textarea
-    id: repro
+    id: description
     attributes:
       label: How did you get this to happen?
-      description: Please provide instructions for how to replicate this issue. Leave blank if it's just "talk to this NPC".
+      description: Leave blank if it's just "talk to this NPC"
     validations:
       required: false
-  - type: upload
-    id: savefile
-    attributes:
-      label: Optional Savefile
-      description: If you think it would be helpful please provide a .zip of your save file [.sav] so we can test the bug, problem, or mistake you encountered. (you can drop, or click to add files).
-    validations:
-      required: true
