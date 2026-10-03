@@ -1,7 +1,7 @@
-name: Grammar Issue
-description: You found a grammar error
-title: "[Bug]:"
-labels: ["Grammar"]
+name: Crash
+description: For times when the game just gives up.
+title: "[Major Bug]:"
+labels: ["Crash"]
 body:
   - type: upload
     id: screenshot
@@ -32,7 +32,7 @@ body:
     id: deviceinfo
     attributes:
       label: Emulator or Flashcart Info
-      description: Flashcart| Include flashcart name, firmware number, and device (GBA, DS lite, Game Cube). Emulator| Include name, version number, and device (Pc, 3ds, Android Phone). Also, if emulating use mGBA; VBA-M and Virtual Console are generally less accurate.
+      description: Flashcart| flashcart name, firmware, and device (GBA, DS lite, Game Cube). Emulator| Include name, version number, and device (Pc, 3ds, Android Phone). Also, if emulating use mGBA; VBA-M and Virtual Console are generally less accurate.
     validations:
       required: true
   - type: input
@@ -74,7 +74,7 @@ body:
   - type: upload
     id: savefile
     attributes:
-      label: Optional Savefile
-      description: If you think it would be helpful please provide a .zip of your save file [.sav] so we can test the bug, problem, or mistake you encountered. (you can drop, or click to add files).
+      label: Savefile
+      description: Please provide a .zip of your savefile [.sav] so we can test the bug, problem, or mistake you encountered. (you can click "drop, or click to add files").
     validations:
       required: true
