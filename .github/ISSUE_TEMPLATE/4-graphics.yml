@@ -7,7 +7,7 @@ body:
     id: screenshot
     attributes:
       label: Image
-      description: Please provide an image of the of the bug, problem, or mistake you encountered. (you can click "Paste, drop, or click to add files").
+      description: Please provide an image of the of the bug, problem, or mistake you encountered. (you can drop, or click to add files).
     validations:
       required: true
   - type: textarea
@@ -49,3 +49,10 @@ body:
       description: Please provide instructions for how to replicate this issue. Leave blank if it's just "talk to this NPC".
     validations:
       required: false
+  - type: upload
+    id: savefile
+    attributes:
+      label: Optional Savefile
+      description: If you think it would be helpful please provide a .zip of your save file [.sav] so we can test the bug, problem, or mistake you encountered. (you can drop, or click to add files).
+    validations:
+      required: true
