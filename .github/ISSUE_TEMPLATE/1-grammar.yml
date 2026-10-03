@@ -1,6 +1,6 @@
-name: Grammar Bug
+name: Grammar Issue
 description: You found a grammar error
-title: "[Bug]:"
+title: "[Issue]:"
 labels: ["Grammar"]
 body:
   - type: upload
