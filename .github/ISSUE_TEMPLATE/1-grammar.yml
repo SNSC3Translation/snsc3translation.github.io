@@ -1,20 +1,38 @@
 name: Grammar Bug
 description: You found a grammar error
-title: "Default"
-labels: ["Bad Grammar"]
+title: "[Bug]:"
+labels: ["Grammar"]
 body:
-  - type: textarea
+  - type: upload
     id: screenshot
     attributes:
-      label: Screenshot
-      description: Please embed the screenshot (you can click "Paste, drop, or click to add files").
+      label: Image
+      description: Please provide an image of the of the bug, problem, or mistake you encountered. (you can click "Paste, drop, or click to add files").
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please provide us with a description of the bug, problem, or mistake you encountered.
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Emulator or Flashcart
+      description: Are you playing this on a flashcart or an emulator? When in doubt, it's an emulator.
+      multiple: false
+      options:
+        - Emulator
+        - Flashcart
     validations:
       required: true
   - type: input
-    id: emulator
+    id: deviceinfo
     attributes:
-      label: Emulator
-      description: Include name and version number. Also, use mGBA if you're not on a phone; VBA-M is generally less accurate.
+      label: Emulator or Flashcart Info
+      description: Flashcart: flashcart name, firmware, and device (GBA, DS lite, Game Cube). Emulator: Include name, version number, and device (Pc, 3ds, Android Phone). Also, if emulating use mGBA; VBA-M and Virtual Console are generally less accurate.
     validations:
       required: true
   - type: input
@@ -40,7 +58,7 @@ body:
       label: Partner Character
       multiple: false
       options:
-        - Run-Dor
+        - RUN-DOR
         - Enzi
         - Killfith
         - Rufeel
@@ -50,18 +68,27 @@ body:
     id: playername
     attributes:
       label: Player Character Name
+      description: Type = if it's the default name. Please use these for special characters (Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|♥|♪|★).
     validations:
       required: true
+  - type: input
+    id: playernick
+    attributes:
+      label: Player Character Nickname
+      description: Leave blank if it's the same as your player character name. Type = if it's the default nickname. Please use these for special characters (Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|♥|♪|★).
+    validations:
+      required: false
   - type: input
     id: beastname
     attributes:
       label: Partner Name
+      description: Type = if it's the default partner name. Please use these for special characters (Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|♥|♪|★).
     validations:
       required: true
   - type: textarea
-    id: description
+    id: repro
     attributes:
       label: How did you get this to happen?
-      description: Leave blank if it's just "talk to this NPC"
+      description: Please provide instructions for how to replicate this issue. Leave blank if it's just "talk to this NPC".
     validations:
       required: false
