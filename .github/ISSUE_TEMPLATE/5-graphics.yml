@@ -1,7 +1,7 @@
-name: Text Wrapping
-description: Text overflows from it's textbox
-title: "[Bug]:"
-labels: ["Text Wrapping"]
+name: Graphical Error
+description: You found an error with a graphic
+title: "[Error]:"
+labels: ["Graphical"]
 body:
   - type: upload
     id: screenshot
@@ -40,49 +40,6 @@ body:
     attributes:
       label: Patch Version
       description: Which version of the patch were you using (including the date)?
-    validations:
-      required: true
-  - type: dropdown
-    id: gender
-    attributes:
-      label: Player Gender
-      multiple: false
-      options:
-        - Boy
-        - Girl
-    validations:
-      required: true
-  - type: dropdown
-    id: partner
-    attributes:
-      label: Partner Character
-      multiple: false
-      options:
-        - RUN-DOR
-        - Enzi
-        - Killfith
-        - Rufeel
-    validations:
-      required: true
-  - type: input
-    id: playername
-    attributes:
-      label: Player Character Name
-      description: Type = if it's the default name. Please use these for special characters (Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|♥|♪|★).
-    validations:
-      required: true
-  - type: input
-    id: playernick
-    attributes:
-      label: Player Character Nickname
-      description: Leave blank if it's the same as your player character name. Type = if it's the default nickname. Please use these for special characters (Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|♥|♪|★).
-    validations:
-      required: false
-  - type: input
-    id: beastname
-    attributes:
-      label: Partner Name
-      description: Type = if it's the default partner name. Please use these for special characters (Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|Ⅶ|Ⅷ|Ⅸ|Ⅹ|♥|♪|★).
     validations:
       required: true
   - type: textarea
