@@ -1,19 +1,38 @@
-name: Bug Report
-description: Click this unless you have a really good reason not to use the template :)
-title: "Put some kind of title here (Github won't let it default to blank :/)"
+name: Catch All
+description: Click this if the other templates don't fit :)
+title: "[Issue]:"
+labels: ["Other"]
 body:
-  - type: textarea
+  - type: upload
     id: screenshot
     attributes:
-      label: Screenshot
-      description: Please embed the screenshot (you can click "Paste, drop, or click to add files").
+      label: Image
+      description: Please provide an image of the of the bug, problem, or mistake you encountered. (you can click "Paste, drop, or click to add files").
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please provide us with a description of the bug, problem, or mistake you encountered.
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Emulator or Flashcart
+      description: Are you playing this on a flashcart or an emulator? When in doubt, it's an emulator.
+      multiple: false
+      options:
+        - Emulator
+        - Flashcart
     validations:
       required: true
   - type: input
-    id: emulator
+    id: deviceinfo
     attributes:
-      label: Emulator
-      description: Include name and version number. Also, use mGBA if you're not on a phone; VBA-M is generally less accurate.
+      label: Emulator or Flashcart Info
+      description: Flashcart| flashcart name, firmware, and device (GBA, DS lite, Game Cube). Emulator| Include name, version number, and device (Pc, 3ds, Android Phone). Also, if emulating use mGBA; VBA-M and Virtual Console are generally less accurate.
     validations:
       required: true
   - type: input
@@ -39,28 +58,24 @@ body:
       label: Partner Character
       multiple: false
       options:
-        - Run-Dor
+        - RUN-DOR
         - Enzi
         - Killfith
         - Rufeel
     validations:
       required: true
-  - type: input
-    id: playername
-    attributes:
-      label: Player Character Name
-    validations:
-      required: true
-  - type: input
-    id: beastname
-    attributes:
-      label: Partner Name
-    validations:
-      required: true
   - type: textarea
-    id: description
+    id: repro
     attributes:
       label: How did you get this to happen?
-      description: Leave blank if it's just "talk to this NPC"
+      description: Please provide instructions for how to replicate this issue. Leave blank if it's just "talk to this NPC".
     validations:
       required: false
+  - type: upload
+    id: savefile
+    attributes:
+      label: Savefile
+      description: Please provide a .zip of your save file [.sav] so we can test the bug, problem, or mistake you encountered. (you can click "drop, or click to add files").
+    validations:
+      required: true
+      
