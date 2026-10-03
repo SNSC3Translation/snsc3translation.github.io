@@ -7,7 +7,7 @@ body:
     id: screenshot
     attributes:
       label: Image
-      description: Please provide an image of the of the bug, problem, or mistake you encountered. (you can click "Paste, drop, or click to add files").
+      description: Please provide an image of the of the bug, problem, or mistake you encountered. (you can drop, or click to add files).
     validations:
       required: true
   - type: textarea
