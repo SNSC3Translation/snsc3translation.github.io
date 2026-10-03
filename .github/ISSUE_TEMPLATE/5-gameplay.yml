@@ -1,7 +1,7 @@
 name: Gameplay/Other
 description: Gameplay or other issues
-title: "[Issue]:"
-labels: ["Gameplay,Other"]
+title: "[Problem]:"
+labels: ["Gameplay"]
 body:
   - type: upload
     id: screenshot
