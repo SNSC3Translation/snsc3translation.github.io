@@ -23,7 +23,19 @@ async function getPatchInfo(){
     return ["", ""];
 }
 
-
+async function getChangeLog(){
+    try {
+        const info = await fetch("download/Changelog.txt");
+        if (info.ok){
+            const data = await info.text();
+            return data;
+        }
+    } catch (error) {
+        console.log(error);
+        return "";
+    }
+    return "";
+}
 
 function toggleSubMenu(button) {
     if (!button.nextElementSibling.classList.contains("show")) {
@@ -42,6 +54,11 @@ const e = document.getElementById('hash');
 const e1 = document.getElementById('version');
 e1.innerText = patch_info[0];
 e.innerText = patch_info[1];
+
+const changeLog = await getChangeLog();
+const e2 = document.getElementById('changelog');
+e2.value = changeLog;
+
 
 async function downloadPatch(){
     const a = document.createElement("a");
