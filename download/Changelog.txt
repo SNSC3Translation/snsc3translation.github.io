@@ -15,7 +15,7 @@ v1.1.0.f
     Corrected mistake where Bostaph's Workshop grunts incorrectly claim VE hurt their master.
     Standardized name of "craft rank" and fixed associated typo.
     Standardized descriptions for the music-themed weapons.
-    Corrected "Irwinite Crystal" to "Elvinite Crystal," now referencing the correct musician (Elvin Bishop).
+    Corrected "Irwinite Crystal" to "Elvinite Crystal," now referencing the correct musician (Elvin Bishop). (credit: testfilemew)
     Corrected Bee Beat being described as "poisonous" when it's actually venomous.
     Some minor text wrap/dialogue edits.
     ---
