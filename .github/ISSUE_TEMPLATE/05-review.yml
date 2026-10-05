@@ -1,7 +1,7 @@
 name: Translation Review
 description: Hang on that can't be right.
 title: "[Translation]:"
-labels: ["Review"]
+labels: ["Translation Review"]
 body:
   - type: upload
     id: screenshot
