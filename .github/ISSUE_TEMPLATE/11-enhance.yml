@@ -1,0 +1,22 @@
+name: Enhancement / Feature
+description: Fix / add this pls.
+title: "[Change]:"
+labels: ["Enhancement or Feature,Other"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please provide us with a description of what you would like to be added or improved.
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: I know what im doing and i'm not reporting a bug.
+      description: This is the wrong template to use if you're trying to report an issue with the patch or website. Game, website, and patch issues go through the other templates.
+      options:
+        - label: Yes
+          required: true
+
+

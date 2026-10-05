@@ -1,0 +1,59 @@
+name: Website Bug
+description: For issues that are on the website
+title: "[Issue]:"
+labels: ["Website"]
+body:
+  - type: upload
+    id: screenshot
+    attributes:
+      label: Image
+      description: Please provide an image of the of the bug, problem, or mistake you encountered.
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please provide us with a description of the bug, problem, or mistake you encountered.
+    validations:
+      required: true
+  - type: input
+    id: deviceinfo
+    attributes:
+      label: internet browser
+      description: What internet browser are you using
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: OS
+      description: What Operating Systems does this occur on?
+      multiple: true
+      options:
+        - Windows 10/11
+        - Windows 8 or older
+        - Mac/Osx
+        - Steam Os
+        - Linux
+        - Ios
+        - Android
+        - I don't know what my OS is
+        - Other Say Below
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How did you get this to happen?
+      description: Please provide instructions for how to replicate this issue.
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: I know what im doing and I need the website template
+      description: This is the wrong template to use if you're trying to report an issue with the patch. Game, and patch issues go through the other templates.
+      options:
+        - label: Yes
+          required: true
