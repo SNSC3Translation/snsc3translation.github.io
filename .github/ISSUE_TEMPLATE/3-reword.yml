@@ -1,6 +1,6 @@
 name: Rewording
-description: This line sounds weird
-title: "[Problem]:"
+description: For text that sounds stiff, unnatural, strange, or like an alien wrote it.
+title: "[Translation]:"
 labels: ["Wording"]
 body:
   - type: upload
@@ -74,7 +74,7 @@ body:
   - type: upload
     id: savefile
     attributes:
-      label: Optional Savefile
-      description: If you think it would be helpful please provide a .zip of your save file [.sav] so we can test the bug, problem, or mistake you encountered.
+      label: Optional Savefile / Savestate
+      description: If you think it would be helpful please provide a .zip of your save file or savestate so we can test the bug, problem, or mistake you encountered.
     validations:
       required: false
