@@ -16,7 +16,7 @@ body:
       label: I know what im doing and i'm not reporting a bug.
       description: This is the wrong template to use if you're trying to report an issue with the patch or website. Game, website, and patch issues go through the other templates.
       options:
-        - label: Yes
+        - label: I know.
           required: true
 
 
