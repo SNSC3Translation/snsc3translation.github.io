@@ -55,5 +55,5 @@ body:
       label: I know what im doing and I need the website template
       description: This is the wrong template to use if you're trying to report an issue with the patch. Game, and patch issues go through the other templates.
       options:
-        - label: Yes
+        - label: I know.
           required: true
