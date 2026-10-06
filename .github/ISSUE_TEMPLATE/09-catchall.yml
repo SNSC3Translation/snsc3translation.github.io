@@ -1,5 +1,5 @@
-name: Catch All
-description: Click this if the other templates don't fit :)
+name: Catch All / Easy Report
+description: Everything is optional; click this if the other templates don't fit, or you wouldn't report otherwise. :)
 title: "[Issue]:"
 labels: ["Other"]
 body:
@@ -9,14 +9,14 @@ body:
       label: Image
       description: Please provide an image of the of the bug, problem, or mistake you encountered. 
     validations:
-      required: true
+      required: false
   - type: textarea
     id: description
     attributes:
       label: Description
       description: Please provide us with a description of the bug, problem, or mistake you encountered.
     validations:
-      required: true
+      required: false
   - type: dropdown
     id: device
     attributes:
@@ -27,43 +27,45 @@ body:
         - Emulator
         - Flashcart
     validations:
-      required: true
+      required: false
   - type: input
     id: deviceinfo
     attributes:
       label: Emulator or Flashcart Info
-      description: Flashcart| flashcart name, firmware, and device (GBA, DS lite, Game Cube). Emulator| Include name, version number, and device (Pc, 3ds, Android Phone). Also, if emulating use mGBA; VBA-M and Virtual Console are generally less accurate.
+      description: Flashcart| Include flashcart name, and device (GBA, DS lite, Game Cube). Emulator| Include name, and device (Pc, 3ds, Android Phone). Also, if emulating use mGBA; VBA-M and Virtual Console are generally less accurate.
     validations:
-      required: true
+      required: false
   - type: input
     id: patchversion
     attributes:
       label: Patch Version
       description: Which version of the patch were you using (including the date)?
     validations:
-      required: true
+      required: false
   - type: dropdown
     id: gender
     attributes:
       label: Player Gender
-      multiple: false
+      description: Please only pick genders you have seen the issue happen with.
+      multiple: true
       options:
         - Boy
         - Girl
     validations:
-      required: true
+      required: false
   - type: dropdown
     id: partner
     attributes:
       label: Partner Character
-      multiple: false
+      description: Please only pick partners you have seen the issue happen with.
+      multiple: true
       options:
         - RUN-DOR
         - Enzi
         - Killfith
         - Rufeel
     validations:
-      required: true
+      required: false
   - type: textarea
     id: repro
     attributes:
@@ -75,7 +77,7 @@ body:
     id: savefile
     attributes:
       label: Semi-optional Savefile / Savestate
-      description: Please it would be very helpful if you provide a .zip of your save file / savestate so we can test the bug, problem, or mistake you encountered.
+      description: Please it's very essential that you include a .zip of your save file / savestate so we can test the bug, problem, or mistake you encountered. The more time we spend tracking bugs the longer fixing them will take.
     validations:
       required: false
 
