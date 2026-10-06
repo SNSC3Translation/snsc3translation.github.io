@@ -32,7 +32,7 @@ body:
     id: deviceinfo
     attributes:
       label: Emulator or Flashcart Info
-      description: Flashcart| flashcart name, firmware, and device (GBA, DS lite, Game Cube). Emulator| Include name, version number, and device (Pc, 3ds, Android Phone). Also, if emulating use mGBA; VBA-M and Virtual Console are generally less accurate.
+      description: Flashcart| flashcart name, and device (GBA, DS lite, Game Cube). Emulator| Include name, and device (Pc, 3ds, Android Phone). Also, if emulating use mGBA; VBA-M and Virtual Console are generally less accurate.
     validations:
       required: true
   - type: input
@@ -46,7 +46,8 @@ body:
     id: gender
     attributes:
       label: Player Gender
-      multiple: false
+      description: Please only pick genders you have seen the issue happen with.
+      multiple: true
       options:
         - Boy
         - Girl
@@ -56,7 +57,8 @@ body:
     id: partner
     attributes:
       label: Partner Character
-      multiple: false
+      description: Please only pick partners you have seen the issue happen with.
+      multiple: true
       options:
         - RUN-DOR
         - Enzi
@@ -75,6 +77,6 @@ body:
     id: savefile
     attributes:
       label: Semi-optional Savefile / Savestate
-      description: Please it would be very helpful if you provide a .zip of your save file / savestate so we can test the bug, problem, or mistake you encountered.
+      description: Please it's very essential that you include a .zip of your save file / savestate so we can test the bug, problem, or mistake you encountered. The more time we spend tracking bugs the longer fixing them will take.
     validations:
       required: false
