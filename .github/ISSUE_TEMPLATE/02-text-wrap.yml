@@ -1,5 +1,5 @@
 name: Text Wrapping
-description: Text overflows from it's textbox
+description: When text overflows from its window or textbox.
 title: "[Text]:"
 labels: ["Text Wrapping"]
 body:

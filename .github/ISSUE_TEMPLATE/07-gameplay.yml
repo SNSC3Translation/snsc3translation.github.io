@@ -1,5 +1,5 @@
 name: Gameplay
-description: For bugged mechanics that are more game than play.
+description: For duplicate textboxes, bugs, glitches, or other unintended things. If a graphical bug is more than just visual it also goes here.
 title: "[Bug]:"
 labels: ["Gameplay"]
 body:
