@@ -1,5 +1,5 @@
 name: Grammar Issue
-description: You found a grammar error
+description: Repeated words or something else that is grammatically incorrect.
 title: "[Text]:"
 labels: ["Grammar"]
 body:
