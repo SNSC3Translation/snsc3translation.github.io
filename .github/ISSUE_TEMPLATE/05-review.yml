@@ -1,5 +1,5 @@
 name: Translation Review
-description: Hang on that can't be right.
+description: Use this only if you think that one of our Japanese to English translations is inaccurate and needs review.
 title: "[Translation]:"
 labels: ["Translation Review"]
 body:
