@@ -81,7 +81,6 @@ div.scroll-container img {
 textarea {
     width: 70vw;
     max-width: 100%;
-    overflow-x: auto;
     padding: 10px;
 }
 
@@ -209,7 +208,7 @@ UL COLUMNS
     }
     
     textarea {
-        width: 80vw;
+        width: 90vw;
     }
     
     .container {
