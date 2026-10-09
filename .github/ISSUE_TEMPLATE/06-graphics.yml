@@ -1,5 +1,5 @@
 name: Graphical Error
-description: Visual only bugs. Think like when graphics bug out, or things dont look right.
+description: NOT FOR TEXT BOX BUGS. Visual only bugs. Think like when graphics bug out, or things dont look right. 
 title: "[Bug]:"
 labels: ["Graphics"]
 body:
